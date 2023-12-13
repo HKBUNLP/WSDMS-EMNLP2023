@@ -302,16 +302,16 @@ if __name__ == "__main__":
 
     trainset_reader, validset_reader = get_train_test_readers(label_map, tokenizer, args)
 
-    # ------------------------------------------
+    # --------------------------------
     # Loading BERT model
-    # ------------------------------------------
+    # ---------------------------------
 
     logger.info('Initializing BERT model')
     bert_model = BertForSequenceEncoder.from_pretrained(args.bert_pretrain)
     
-    # ------------------------------------------
+    # -----------------------------------
     # Visualize model
-    # ------------------------------------------
+    # -----------------------------------
 
     if args.enable_tensorboard:
         from torch.utils.tensorboard import SummaryWriter
